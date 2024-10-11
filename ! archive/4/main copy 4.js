@@ -1,5 +1,3 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable strict */
 /* eslint-disable no-shadow */
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable prefer-template */
@@ -17,3 +15,13 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-var */
+
+var PI = 10;
+
+(function () {
+  console.log('Hello World')
+  var PI = 20
+  console.log(PI)
+}())
+
+console.log(PI)

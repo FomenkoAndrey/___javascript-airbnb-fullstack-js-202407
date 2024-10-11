@@ -1,5 +1,3 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable strict */
 /* eslint-disable no-shadow */
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable prefer-template */
@@ -17,3 +15,18 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-var */
+
+var i = 5
+console.log(i) // ! 5 global scope
+var func = function () {
+  var i = 10 // ? local1 scope
+  console.log(i) // ? 10 local1 scope
+  var innerFunc = function () {
+    var i = 15 // ~ local2 scope
+    console.log(i) // ~ 15 local2 scope
+  }
+  innerFunc()
+  console.log(i) // ? 10 local1 scope
+}
+func()
+console.log(i) // ! 5 global scope

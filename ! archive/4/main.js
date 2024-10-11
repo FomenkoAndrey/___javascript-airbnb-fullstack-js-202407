@@ -1,7 +1,3 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable strict */
-/* eslint-disable no-shadow */
-/* eslint-disable prefer-arrow-callback */
 /* eslint-disable prefer-template */
 /* eslint-disable no-extra-label */
 /* eslint-disable no-labels */
@@ -17,3 +13,21 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-var */
+
+// ! function declaration
+// function sum(a, b) {
+//   return a + b
+// }
+
+// ! function definition
+var sum = function () {
+  var result = 0
+  for (var i = 0; i < arguments.length; i++) {
+    console.log(arguments[i])
+    result += arguments[i]
+  }
+
+  return result
+}
+
+console.log('result:', sum(1, 2, 3, 4, 5))

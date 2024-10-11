@@ -1,6 +1,3 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable strict */
-/* eslint-disable no-shadow */
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable prefer-template */
 /* eslint-disable no-extra-label */
@@ -17,3 +14,25 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-var */
+
+function main(arg) {
+  if (typeof arg === 'function') {
+    console.log(arg())
+    return
+  }
+  console.log(arg)
+}
+
+main('str')
+main(123)
+main(true)
+main(null)
+main({})
+main([])
+main(function () { console.log('innerFunc done') })
+
+var innerFn = function () {
+  console.log('innerFunc done')
+}
+
+main(innerFn)

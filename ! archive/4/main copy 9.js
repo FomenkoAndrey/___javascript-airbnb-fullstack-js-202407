@@ -17,3 +17,20 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-var */
+
+// ! hoisting with function declaration
+// console.log(sum(1, 2))
+// function sum(a, b) {
+//   return a + b
+// }
+
+// ! hoisting with function expression
+// console.log(sum(1, 2))
+// var sum = function (a, b) {
+//   return a + b
+// }
+
+// ! hoisting with var
+console.log(a)
+var a = 1
+console.log(a)

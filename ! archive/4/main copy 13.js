@@ -17,3 +17,19 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-var */
+
+function createUrlGenerator(tld) {
+  return function (subdomin) {
+    return `https://${subdomin}.${tld}`
+  }
+}
+
+var comUrlGenerator = createUrlGenerator('com')
+var uaUrlGenerator = createUrlGenerator('ua')
+
+console.log(comUrlGenerator('google'))
+console.log(comUrlGenerator('yahoo'))
+console.log(comUrlGenerator('me'))
+
+console.log(uaUrlGenerator('meta'))
+console.log(uaUrlGenerator('i'))
