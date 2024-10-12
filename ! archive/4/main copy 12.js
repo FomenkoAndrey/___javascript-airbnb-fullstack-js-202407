@@ -28,7 +28,6 @@
 
 // counter.count = 0
 
-// ! Closure
 function createCounter() {
   var count = 0
 
