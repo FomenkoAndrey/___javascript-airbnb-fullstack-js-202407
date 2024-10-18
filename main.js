@@ -1,23 +1,37 @@
-const person = {
-  name: 'John',
-  // ! accessor
-  _age: 25,
-  get age() {
-    return this._age
-  },
-  set age(v) {
-    this._age = v < 0 ? 0 : v > 122 ? 122 : v
-  },
+/* eslint-disable max-classes-per-file */
+class Person {
+  constructor(name, age, sex) {
+    this.name = name
+    this.age = age
+    this.sex = sex
+  }
+
+  print() {
+    console.log(`Name: ${this.name}`)
+  }
+
+  greet() {
+    return `Hi, ${this.name}`
+  }
 }
 
-Object.defineProperty(person, '_age', {
-  enumerable: false,
-  configurable: false,
-  writable: true,
-})
+const person1 = new Person('John', 32, 'male')
+console.log(person1.greet())
 
-console.log(person.age)
-person.age = 40
-console.log(person.age)
-person.age = 55
-console.log(person.age)
+class Developer extends Person {
+  constructor(...args) {
+    super(...args)
+    this.skills = args[3] || []
+  }
+
+  greet() {
+    const result = super.greet()
+    console.log(`${result}! You are a developer!`)
+  }
+}
+
+const developer1 = new Developer('Pavlo', 20, 'male', [ 'HTML', 'CSS', 'JavaScript' ])
+
+console.log(developer1)
+developer1.print()
+developer1.greet()
