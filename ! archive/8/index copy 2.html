@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <p>Перший абзац.</p>
+  <p>Другий абзац.</p>
+
+  <script>
+    // Отримання усіх елементів з тегом 'p'
+    const paragraphs = document.getElementsByTagName("p");
+
+    console.log(paragraphs)
+
+    // Зміна фону кожного абзацу
+    for (var i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].style.background = "yellow";
+    }
+  </script>
+
+</body>
+
+</html>

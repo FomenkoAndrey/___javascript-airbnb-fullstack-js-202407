@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <div id="divElement" class="class1">Деякий текст</div>
+
+  <script>
+    // Отримання елемента
+    const divElement = document.getElementById("divElement");
+    console.dir(divElement)
+    // Додавання нового класу
+    divElement.classList.add("class2");
+
+    // Перевірка наявності класу
+    console.log(divElement.classList.contains("class1")); // Виведення: true
+
+    // Видалення класу
+    divElement.classList.remove("class1");
+
+    // Переключення класу (додає, якщо його немає, та видаляє, якщо є)
+    divElement.classList.toggle("class3"); // Додає
+    divElement.classList.toggle("class3"); // Видаляє
+    divElement.classList.toggle("class3"); // Додає
+  </script>
+
+</body>
+
+</html>

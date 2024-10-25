@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <div class="user">Користувач 1</div>
+  <div class="user">Користувач 2</div>
+  <div class="user">Користувач 3</div>
+  <div class="user">Користувач 4</div>
+  <div class="user">Користувач 5</div>
+
+  <script>
+    // Отримання всіх елементів з класом 'user'
+    const userDivs = document.querySelectorAll(".user");
+
+    console.log(userDivs);
+
+    // Зміна кольору кожного знайденого елемента
+    userDivs.forEach(function (div) {
+      div.style.color = "red";
+    });
+  </script>
+
+</body>
+
+</html>
