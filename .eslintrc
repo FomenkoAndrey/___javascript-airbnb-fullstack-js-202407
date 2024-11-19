@@ -11,12 +11,14 @@
     "es6": true
   },
   "rules": {
+    "implicit-arrow-linebreak": "off",
+    "array-bracket-spacing": "off",
+    "arrow-parens": "off",
     "linebreak-style": ["error", "windows"],
     "semi": ["error", "never"],
     "quotes": ["error", "single", { "avoidEscape": true }],
     "indent": ["error", 2, { "SwitchCase": 1 }],
-    "comma-dangle": ["error", "always-multiline"],
-    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": "off",
     "no-console": "off",
     "no-nested-ternary": "off",
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
@@ -26,7 +28,6 @@
     "no-param-reassign": ["error", { "props": false }],
     "func-names": ["error", "never"],
     "object-curly-spacing": ["error", "always"],
-    "array-bracket-spacing": ["error", "always"],
     "space-before-function-paren": ["error", {
       "anonymous": "always",
       "named": "never",
